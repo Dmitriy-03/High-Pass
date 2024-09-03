@@ -1,0 +1,269 @@
+.hero {
+  font-family: TT Firs Neue, sans-serif;
+  padding-top: 41px;
+  padding-bottom: 68px;
+
+  &__container {
+    display: grid;
+    grid-template: minmax(13px, 1fr) 295px 257px / repeat(4, 1fr);
+    min-height: 630px;
+    gap: 30px;
+  }
+
+  &__block {
+    background-color: #cacaca;
+    min-height: 50px;
+    min-width: 50px;
+  }
+
+  &__block--big {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    background: url("../../img/hero-img--1.jpg") no-repeat center / cover;
+  }
+
+  &__title {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    font-family: TTFirsNeue, sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 104%;
+    color: #202020;
+    margin-top: -7px;
+  }
+
+  &__block--middle {
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    background: url("../../img/hero-img--2.jpg") no-repeat center / cover;
+  }
+
+  &__block--small {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__block--smallImg--1 {
+    background-image: url("../../img/hero-img--3.jpg");
+  }
+
+  &__block--smallImg--2 {
+    background-image: url("../../img/hero-img--4.jpg");
+  }
+}
+.bigHeroCard {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+
+  &__category {
+    width: 123px;
+    height: 30px;
+    top: 15px;
+    right: 15px;
+  }
+
+  &__content {
+    padding: 60px;
+  }
+
+  &__subtitle {
+    margin-bottom: 7px;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+    color: #fff;
+  }
+
+  &__title {
+    font-family: TTFirsNeue, sans-serif;
+    margin-bottom: 19px;
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 104%;
+    max-width: 427px;
+    color: #fff;
+  }
+
+  &__btn {
+    width: 159px;
+    min-height: 50px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .hero {
+    padding-top: 34px;
+
+    &__container {
+      grid-template: minmax(13px, 1fr) 327px 186px / repeat(4, 1fr);
+      min-height: 600px;
+    }
+
+    &__title {
+      margin-top: 0;
+    }
+
+    &__block--big {
+      background: url("../../img/hero-img--1-1024.jpg") no-repeat center / cover;
+    }
+
+    &__block--middle {
+      background: url("../../img/hero-img--2-1024.jpg") no-repeat center / cover;
+    }
+
+    &__block--smallImg--1 {
+      background-image: url("../../img/hero-img--3-1024.jpg");
+    }
+
+    &__block--smallImg--2 {
+      background-image: url("../../img/hero-img--4-1024.jpg");
+    }
+  }
+
+  .bigHeroCard {
+    &__content {
+      padding: 30px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .hero {
+    &__container {
+      grid-template: minmax(13px, 1fr) 228px 133px / repeat(4, 1fr);
+      min-height: 352px;
+    }
+
+    &__block--big {
+      background: url("../../img/hero-img--1-768.jpg") no-repeat center / cover;
+    }
+
+    &__title {
+      font-size: 22px;
+      margin-bottom: -13px;
+    }
+
+    &__block--middle {
+      background: url("../../img/hero-img--2-768.jpg") no-repeat center / cover;
+    }
+
+    &__block--smallImg--1 {
+      background-image: url("../../img/hero-img--3-768.jpg");
+    }
+
+    &__block--smallImg--2 {
+      background-image: url("../../img/hero-img--4-768.jpg");
+    }
+  }
+
+  .bigHeroCard {
+    &__subtitle {
+      margin-bottom: 13px;
+    }
+
+    &__title {
+      line-height: 90%;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .hero {
+    &__title {
+      font-size: 18px;
+      line-height: 104%;
+    }
+  }
+
+  .bigHeroCard {
+    &__subtitle {
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    &__title {
+      font-size: 24px;
+      line-height: 110%;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .hero {
+    padding-top: 30px;
+    padding-bottom: 50px;
+
+    &__container {
+      grid-template-rows: none;
+    }
+
+    &__block--big {
+      grid-column-start: 1;
+      grid-column-end: 5;
+      height: 422px;
+      background: url("../../img/hero-img--1-320.jpg") no-repeat center / cover;
+    }
+
+    &__title {
+      grid-column-start: 1;
+      grid-column-end: 5;
+      margin-top: 4px;
+    }
+
+    &__block--middle {
+      grid-column-start: 1;
+      grid-column-end: 5;
+      grid-row: initial;
+      height: 186px;
+      background: url("../../img/hero-img--2-320.jpg") no-repeat center / cover;
+    }
+
+    &__block--small {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row: initial;
+      height: 105px;
+    }
+
+    &__block--smallImg--1 {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      background-image: url("../../img/hero-img--3-320.jpg");
+    }
+
+    &__block--smallImg--2 {
+      grid-column-start: 3;
+      grid-column-end: 5;
+      background-image: url("../../img/hero-img--4-320.jpg");
+    }
+  }
+
+  .bigHeroCard {
+    &__category {
+      width: 95px;
+      height: 22px;
+      top: 5px;
+      right: 6px;
+    }
+
+    &__subtitle {
+      margin-bottom: 9px;
+    }
+
+    &__title {
+      margin-bottom: 14px;
+    }
+
+    &__btn {
+      width: 145px !important;
+      min-height: 40px;
+    }
+  }
+}

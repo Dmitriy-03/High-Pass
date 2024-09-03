@@ -1,0 +1,12 @@
+@import "_normalize.scss";
+@import "variables.scss";
+@import "_font.scss";
+@import "_common.scss";
+@import "_mixins.scss";
+
+@import "./components/header.scss";
+@import "./components/hero.scss";
+@import "./components/about.scss";
+@import "./components/project.scss";
+@import "./components/contact.scss";
+@import "./components/footer.scss";
