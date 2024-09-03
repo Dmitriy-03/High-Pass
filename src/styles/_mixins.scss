@@ -1,0 +1,3 @@
+@function blockPercent($widthEl, $widthContainer) {
+  @return calc($widthEl / $widthContainer * 100%);
+}

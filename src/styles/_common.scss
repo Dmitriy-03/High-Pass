@@ -1,0 +1,154 @@
+@import "variables.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.container {
+  max-width: $maxContainer;
+  margin: 0 auto;
+  padding-right: 31px;
+  padding-left: 31px;
+}
+
+.btn {
+  font-family: Roboto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: $colorFontBtn;
+  background-color: $bgBtn;
+  border: 3px solid $bgBtn;
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  &:hover {
+    background-color: $hoverBtn;
+    border-color: $hoverBtn;
+  }
+  &:focus {
+    border-color: $focusBtn;
+  }
+  &:active {
+    transition: none;
+    background-color: $activeBtn;
+    border-color: $activeBtn;
+  }
+}
+
+@media (max-width: 576px) {
+  .btn {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+.category {
+  font-family: Roboto;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $colorCategory;
+  color: #fff;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  transition: color 0.2s ease-in-out;
+  &:hover {
+    color: $bgBtn;
+  }
+  &:focus {
+    color: $bgBtn;
+  }
+  &:active {
+    color: $activeBtn;
+  }
+}
+
+@media (max-width: 576px) {
+  .category {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+
+.title {
+  font-family: TTFirsNeue, sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 31px;
+}
+
+@media (max-width: 576px) {
+  .title {
+    font-size: 18px;
+    line-height: 23px;
+  }
+}
+
+.input {
+  border: 1px solid $bgInput;
+  background-color: $bgInput;
+  height: 50px;
+  padding-left: 23px;
+  padding-right: 23px;
+  font-family: Roboto;
+  font-size: 16px;
+  line-height: 19px;
+  color: #fff;
+  &::placeholder {
+    font-family: Roboto;
+    font-size: 16px;
+    line-height: 19px;
+    color: #999999;
+    transition: color 0.2s ease-in-out;
+  }
+
+  &:hover::placeholder {
+    color: #ff6e30;
+  }
+  &:focus {
+    outline: 1px solid #ff6e30;
+  }
+}
+
+@media (max-width: 576px) {
+  .input {
+    height: 40px;
+  }
+}
+
+.contactForm__input-wrap {
+  position: relative;
+}
+
+.js-validate-error-label {
+  position: absolute;
+  top: -16px;
+  left: 20px;
+  font-size: 12px;
+  line-height: 14px;
+  color: #d11616 !important;
+}

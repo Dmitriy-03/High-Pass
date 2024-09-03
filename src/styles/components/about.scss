@@ -1,0 +1,132 @@
+.about {
+  padding-top: 30px;
+  padding-bottom: 69px;
+  background-color: $colorBgAbout;
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  &__title {
+    margin-bottom: 2px;
+    color: $colorAboutTittle;
+  }
+
+  &__text {
+    font-family: Roboto, sans-serif;
+    color: $colorAboutText;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  &__img {
+    margin-bottom: 25px;
+    width: 100%;
+    height: 255px;
+    background: url("../../img/about-img--1.jpg") no-repeat center / cover;
+  }
+}
+
+.formAbout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+
+  &__title {
+    width: 100%;
+    font-family: TTFirsNeue, sans-serif;
+    color: $colorAboutTittle;
+    font-size: 22px;
+    line-height: 22px;
+  }
+
+  &__input {
+    line-height: 22px;
+    width: 100%;
+    max-width: 474px;
+  }
+
+  &__btn {
+    width: 126px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .about {
+    padding-bottom: 63px;
+
+    &__text {
+      padding-right: 4px;
+    }
+
+    &__img {
+      height: 332px;
+      background: url("../../img/about-img--1-1024.jpg") no-repeat center /
+        cover;
+    }
+  }
+
+  .formAbout {
+    &__input {
+      max-width: 342px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .about {
+    padding-bottom: 65px;
+
+    &__img {
+      height: 569px;
+      background: url("../../img/about-img--1-768.jpg") no-repeat center / cover;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .about {
+    padding-top: 32px;
+    padding-bottom: 63px;
+
+    &__title {
+      margin-bottom: 4px;
+    }
+
+    &__container {
+      display: block;
+    }
+
+    &__left {
+      margin-bottom: 23px;
+    }
+
+    &__text {
+      padding-right: 0;
+      font-size: 14px;
+      line-height: 25px;
+    }
+
+    &__img {
+      height: 278px;
+      background: url("../../img/about-img--1-320.jpg") no-repeat center / cover;
+    }
+  }
+
+  .formAbout {
+    &__title {
+      font-size: 17px;
+      line-height: 22px;
+    }
+  }
+
+  .btn {
+    width: 115px;
+    height: 40px;
+  }
+}
